@@ -15,12 +15,11 @@ body {
     font-family: sans-serif;
     background-color: black;
     color: white;
-    background-image: url('../images/Background.jpg');
 }
 
 /* main header rules */
 header {
-    background-color: gold;
+    background-color: black;;
     position: sticky;
     top: 0;
     text-align: center;
@@ -31,9 +30,8 @@ header {
 /* main rules here */
 #character_nav {
     text-align: center;
-    background-color: blueviolet;
 
-    background-image: url('../images/Cocorrina\ &\ Co\ ™\ \(@cocorrina_co\)\ •\ Instagram\ photos\ and\ videos.jpg');
+    background-image: url('../images/main\ bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -43,6 +41,7 @@ header {
 .characters { list-style-type: none; }
 
 .characters li { 
+    position: relative;
     display: inline-block;
     height: 220px;
     margin: 10px 8px;
@@ -50,21 +49,34 @@ header {
     background-color: black;
 
     text-align: left;
-
     cursor: pointer;
 }
 
 .characters li h5 {
+    position: relative;
+    color: white;
     padding: 12px 8px;
+
+    z-index: 500;
 }
+
+.characters li a { text-decoration: none; }
 
 .gold_bumper {
     width: 100%;
     height: 6px;
-    background-color: gold;
+    background-color: rgb(220, 109, 5);
+
+    transition: height 0.2s ease;
+
+    position: absolute;
 }
 
-article { padding: 20px; }
+.characters li:hover .gold_bumper { height: 70px; }
+
+article { 
+    padding: 20px; 
+}
 
 /* select the h3 tag  inside the article tag in the page */
 /* a selector followed by a space and then ANOTHER sleector gets a reference to the paren element and then the child element or elements */
@@ -128,12 +140,20 @@ footer {
     background-size: 55vh;
     background-position: 40px bottom;
 
+    z-index: 5000;
+
     display: none;
 }
 
-#lightbox2 { background-image: url('../images/QUEEN\ OF\ CUPS.png'); }
-#lightbox3 { background-image: url('../images/QUEEN\ OF\ SWORDS.png'); }
-#lightbox4 { background-image: url('../images/QUEEN\ OF\ PENTACLES.png'); }
+#lightbox2 { 
+    background-image: url('../images/QUEEN\ OF\ CUPS.png')
+ }
+
+#lightbox3 { 
+    background-image: url('../images/QUEEN\ OF\ SWORDS.png') }
+
+#lightbox4 { 
+    background-image: url('../images/QUEEN\ OF\ PENTACLES.png'); }
 
 .lightbox_close {
     position: relative;
@@ -148,7 +168,7 @@ footer {
     font-weight: bolder;
 }
 
-.lightbox_close:hover { opacity: 0.5; color: green;}
+.lightbox_close:hover { opacity: 0.5; color: rgb(227, 106, 13);}
 
 .lightbox article {
     width: 55%;
