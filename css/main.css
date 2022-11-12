@@ -15,6 +15,7 @@ body {
     font-family: sans-serif;
     background-color: black;
     color: white;
+    background-image: url('../images/Background.jpg');
 }
 
 /* main header rules */
@@ -39,7 +40,7 @@ header {
     background-blend-mode: multiply;
 }
 
-.characters { list-style-type: none;}
+.characters { list-style-type: none; }
 
 .characters li { 
     display: inline-block;
@@ -54,11 +55,8 @@ header {
 }
 
 .characters li h5 {
-    color: white;
     padding: 12px 8px;
 }
-
-.characters li a { text-decoration: none; }
 
 .gold_bumper {
     width: 100%;
