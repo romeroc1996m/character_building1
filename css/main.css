@@ -15,7 +15,6 @@ body {
     font-family: sans-serif;
     background-color: black;
     color: white;
-    background-image: url('../images/Cocorrina\ &\ Co\ ™\ \(@cocorrina_co\)\ •\ Instagram\ photos\ and\ videos.jpg');
 }
 
 /* main header rules */
@@ -31,15 +30,40 @@ header {
 /* main rules here */
 #character_nav {
     text-align: center;
-    background-color: black;
+    background-color: blueviolet;
+
+    background-image: url('../images/Cocorrina\ &\ Co\ ™\ \(@cocorrina_co\)\ •\ Instagram\ photos\ and\ videos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: multiply;
 }
 
 .characters { list-style-type: none;}
-.characters li { display: inline-block; }
 
-.characters li img {
-    width: 150px;
+.characters li { 
+    display: inline-block;
+    height: 220px;
+    margin: 10px 8px;
+    
+    background-color: black;
+
+    text-align: left;
+
     cursor: pointer;
+}
+
+.characters li h5 {
+    color: white;
+    padding: 12px 8px;
+}
+
+.characters li a { text-decoration: none; }
+
+.gold_bumper {
+    width: 100%;
+    height: 6px;
+    background-color: gold;
 }
 
 article { padding: 20px; }
@@ -60,6 +84,20 @@ article p {
     text-align: center;
     margin: 0 auto;
 }
+
+.sprite {
+    width: 150px;
+    height: 150px;
+
+    background-image: url('../images/Grimoire\ Noble\ Edition.jpg');
+}
+
+#queen_of_cups { background-position: -150px 0; }
+#queen_of_swords { background-position: -300px 0; }
+#queen_of_pentacles { background-position: -450px 0; }
+
+.sprite:hover { background-position-y: -150px !important; }
+
 /* footer rules here */
 footer {
     color: white;
@@ -74,3 +112,59 @@ footer {
     height: 80px;
     background-color: rgb(40, 37, 37);
 }
+
+/* lightbox rules here */
+
+.lightbox {
+    width: 100vw; 
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url('../images/QUEEN\ OF\ WANDS.jpg');
+    background-repeat: no-repeat;
+
+    background-size: 55vh;
+    background-position: 40px bottom;
+
+    display: none;
+}
+
+#lightbox2 { background-image: url('../images/QUEEN\ OF\ CUPS.png'); }
+#lightbox3 { background-image: url('../images/QUEEN\ OF\ SWORDS.png'); }
+#lightbox4 { background-image: url('../images/QUEEN\ OF\ PENTACLES.png'); }
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
+
+    color: white;
+    font-size: 3em;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+}
+
+.lightbox_close:hover { opacity: 0.5; color: green;}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lb_text, .lb_heading { text-align: left; }
+
+.leb_text {
+    line-height: 1.6 !important;
+    margin-left: 0;
+    padding-top: 2em;
+}
+
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block; }
